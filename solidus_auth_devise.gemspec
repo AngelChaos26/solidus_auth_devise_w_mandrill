@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = "solidus_auth_devise_w_mandrill"
+  s.name        = "solidus_auth_devise"
   s.version     = "1.6.1"
   s.summary     = "Provides authentication and authorization services for use with Solidus by using Devise and CanCan also it integrates mandrill api"
   s.description = s.summary
@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency "devise", '~> 4.1'
   s.add_dependency "devise-encryptable", "0.2.0"
   s.add_dependency 'deface', '~> 1.0.0'
-  s.add_dependency('mandrill-api')
+  s.add_dependency 'mandrill-api'
 
   s.add_dependency "json"
   s.add_dependency "multi_json"
