@@ -24,7 +24,7 @@ module Spree
       @confirmation_url = spree.spree_user_confirmation_url(confirmation_token: token, host: @store.url)
 
       merge_vars = {
-        "FIRST_NAME" => user.email,
+        "FIRST_NAME" => user.first_name,
         "USER_URL" => @confirmation_url,
       }
 
