@@ -16,7 +16,7 @@ module Spree
 
       body = mandrill_template("reset_user_password", merge_vars)
 
-      mail to: user.email, body: body,content_type: "text/html", from: from_address(@store), subject: "#{@store.name} #{I18n.t(:subject, scope: [:devise, :mailer, :reset_password_instructions])}"
+      mail to: user.email, body: body,content_type: "text/html", from:"Wedjourney <contact@wedjourney.com>", subject: "#{@store.name} #{I18n.t(:subject, scope: [:devise, :mailer, :reset_password_instructions])}"
     end
 
     def confirmation_instructions(user, token, opts={})
@@ -30,7 +30,7 @@ module Spree
 
       body = mandrill_template("confirm_user", merge_vars)
 
-      mail to: user.email, body: body, content_type: "text/html", from: from_address(@store), subject: "#{@store.name} #{I18n.t(:subject, scope: [:devise, :mailer, :confirmation_instructions])}"
+      mail to: user.email, body: body, content_type: "text/html", from:"Wedjourney <contact@wedjourney.com>", subject: "#{@store.name} #{I18n.t(:subject, scope: [:devise, :mailer, :confirmation_instructions])}"
     end
 
 
